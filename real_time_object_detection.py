@@ -5,6 +5,7 @@
 from imutils.video import VideoStream
 from imutils.video import FPS
 import numpy as np
+import matplotlib.pyplot as plt
 import argparse
 import imutils
 import time
@@ -149,8 +150,9 @@ while True:
 			cv2.putText(frame, label, (startX, y), cv2.FONT_HERSHEY_SIMPLEX, 0.5, COLORS[idx], 2)
 
 	# show the output frame
-	cv2.imshow("Frame", frame)
-
+	
+	plt.imshow(frame)
+	plt.show()
 	# HOW TO STOP THE VIDEOSTREAM?
 	# Using cv2.waitKey(1) & 0xFF
 
